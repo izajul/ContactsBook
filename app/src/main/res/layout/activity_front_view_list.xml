@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_front_view_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.izajul.contactsbook.Activity.FrontViewList">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showAsAction="ifRoom|collapseActionView" />
+        <ListView
+            android:id="@+id/onSearchLIstView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/tabLayoutShow"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"/>
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:background="#36125688"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/serarchButton"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#698ac7"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/search"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/addPeopleButton"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="#698ac7"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/addpeoples"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+
+            android:contentDescription="@null"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+</LinearLayout>
